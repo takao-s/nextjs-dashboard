@@ -15,9 +15,8 @@ const FormSchema = z.object({
 const CreateInvoice = FormSchema.omit({id: true, date: true});
 
 export async function createInvoice(formData: FormData) {
-    console.log(formData)
     const { customerId, amount, status } = CreateInvoice.parse({
-        constomerId: formData.get('customerId'),
+        customerId: formData.get('customerId'),
         amount: formData.get('amount'),
         status: formData.get('status'),
     });
