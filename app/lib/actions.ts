@@ -9,7 +9,7 @@ const FormSchema = z.object({
     customerId: z.string(),
     amount: z.coerce.number(),
     status: z.enum(['pending', 'paid']),
-    data: z.string(),
+    date: z.string(),
 });
 
 const CreateInvoice = FormSchema.omit({id: true, date: true});
