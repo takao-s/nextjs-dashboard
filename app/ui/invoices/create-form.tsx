@@ -96,7 +96,6 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
                   type="radio"
                   value="pending"
                   className="h-4 w-4 cursor-pointer border-gray-300 bg-gray-100 text-gray-600 focus:ring-2"
-                  aria-describedby="status-error"
                 />
                 <label
                   htmlFor="pending"
@@ -120,24 +119,6 @@ export default function Form({ customers }: { customers: CustomerField[] }) {
                   Paid <CheckIcon className="h-4 w-4" />
                 </label>
               </div>
-              <div className="flex items-center">
-                <input
-                  id="billed"
-                  name="status"
-                  type="radio"
-                  value="billed"
-                  className="h-4 w-4 cursor-pointer border-gray-300 bg-gray-100 text-gray-600 focus:ring-2"
-                />
-                <label
-                  htmlFor="billed"
-                  className="ml-2 flex cursor-pointer items-center gap-1.5 rounded-full bg-blue-500 px-3 py-1.5 text-xs font-medium text-white"
-                >
-                  billed <CheckIcon className="h-4 w-4" />
-                </label>
-              </div>
-
-
-
             </div>
             <div id="status-error" aria-live="polite" aria-atomic="true">
               {state.errors?.status &&
